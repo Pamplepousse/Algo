@@ -1,6 +1,6 @@
 import * as rl from 'readline-sync';
 
-var a = true
+var a:boolean = true
 var randomNumber = Math.floor(Math.random() * 3 + 1);
 
 function rps(randomNumber: number): void {

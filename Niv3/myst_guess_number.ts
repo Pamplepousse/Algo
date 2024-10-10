@@ -1,6 +1,6 @@
 import * as rl from 'readline-sync';
 
-var a = true
+var a:boolean = true
 var randomNumber = Math.floor(Math.random() * 1000 + 1);
 
 function myst_guess_num(randomNumber: number): void {
