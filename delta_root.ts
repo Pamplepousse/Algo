@@ -4,20 +4,14 @@ var c: number = 2;
 var monresult: number[];
 var deltares: number;
 
-function deltaa(a: number,b:number,c:number): number 
-    {
-        let res : number = 0;
-        res=b*b
-        res=res-4*a*c
-        return res;
 
-    
-    }
-    deltares = deltaa(a,b,c); 
 
-    function root(a: number,b:number,c:number,deltares:number): number[] 
+    function root(a: number,b:number,c:number): number[] 
     {
         let resu : number [] = [0];
+        deltares=b*b
+        deltares=deltares-4*a*c
+
         if (deltares == 0) 
             {
                 resu[0]= -b/2*a
@@ -38,5 +32,5 @@ function deltaa(a: number,b:number,c:number): number
 
 
 
-  monresult = root(a,b,c,deltares); 
-  console.log (monresul);
+  monresult = root(a,b,c); 
+  console.log (monresult);
