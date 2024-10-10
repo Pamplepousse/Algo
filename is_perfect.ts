@@ -1,16 +1,27 @@
-var a: number = 4;
-var b: number = 12;
-var c: number = 2;
-var monresul: number;
+var num: number = 9;
+var monresulti: boolean;
 
-function delta(a: number,b:number,c:number): number 
+function is_perfect(num: number): boolean 
     {
-        let res : number = 0;
-        res=b*b
-        res=res-4*a*c
-        return res;
+        let resu : number [] = [0];
+        let x : number = 0;
+        for (let i = 1; i <= num; i++) {
+            if (num%i == 0) 
+                {
+                    resu[x]=i
+                }
+        }
+        x=0;
+        for (let i = 0; i < resu.length; i++) {
+            x=+resu[i]
+        }
 
-    
+        if(x==num){
+            return true
+        }
+        else{
+            return false
+        }
     }
-  monresul = delta(a,b,c); 
-  console.log (monresul);
+  monresulti = is_perfect(num); 
+  console.log (monresulti);
