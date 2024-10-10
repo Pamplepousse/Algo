@@ -1,22 +1,24 @@
-var num: number = 9;
+var num: number = 28;
 var monresulti: boolean;
 
 function is_perfect(num: number): boolean 
     {
         let resu : number [] = [0];
         let x : number = 0;
-        for (let i = 1; i <= num; i++) {
+        let y : number = 0;
+        for (let i = 1; i < num; i++) {
             if (num%i == 0) 
                 {
-                    resu[x]=i
+                    resu[x]=i;
+                    x=x+1;
                 }
         }
-        x=0;
+        
         for (let i = 0; i < resu.length; i++) {
-            x=+resu[i]
+            y=y+resu[i];
         }
 
-        if(x==num){
+        if(y==num){
             return true
         }
         else{
