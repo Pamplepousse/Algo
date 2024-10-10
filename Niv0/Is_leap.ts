@@ -1,7 +1,7 @@
 var year: number = 2024;
 var monresu:boolean;
 
-function Is_leap(year: number): boolean {
+function is_leap(year: number): boolean {
 
 
     if (year%4 == 0) 
@@ -27,5 +27,5 @@ function Is_leap(year: number): boolean {
             return false;
         }
   }
-  monresu = Is_leap(year); 
+  monresu = is_leap(year); 
   console.log (monresu);

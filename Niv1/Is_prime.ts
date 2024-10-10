@@ -1,7 +1,7 @@
 var numo: number = 17;
 var monresu : boolean;
 
-function Is_Prime(numo: number): boolean {
+function is_Prime(numo: number): boolean {
 
     for (let i = 2; i < numo; i++) {
         if (numo%i == 0) 
@@ -11,5 +11,5 @@ function Is_Prime(numo: number): boolean {
     }
     return true;
   }
-  monresu = Is_Prime(numo); 
+  monresu = is_Prime(numo); 
   console.log (monresu);

@@ -8,13 +8,14 @@ var deltares: number;
 
     function root(a: number,b:number,c:number): number[] 
     {
-        let resu : number [] = [0];
+        let resu : number [] = [];
         deltares=b*b
         deltares=deltares-4*a*c
 
         if (deltares == 0) 
             {
-                resu[0]= -b/2*a
+
+                resu.push(-b/2*a)
                 return resu;
             }
         else if (deltares<0)
@@ -24,8 +25,8 @@ var deltares: number;
         else
             {
                 let square : number= Math.sqrt(deltares);
-                resu[0]= -b-square/2*a
-                resu[1]= -b+square/2*a
+                resu.push(-b-square/2*a)
+                resu.push(-b+square/2*a)
                 return resu;
             }
     }
