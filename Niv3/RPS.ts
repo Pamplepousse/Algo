@@ -1,14 +1,11 @@
-import * as readline from 'readline';
-var a=2;
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+import * as rl from 'readline-sync';
+
+var a = true
 var randomNumber = Math.floor(Math.random() * 3 + 1);
 
 function rps(randomNumber: number): void {
-    rl.question("Rock, Paper, ou Scissors? ", function(answer) {
-        
+    while (a) {
+        let answer = rl.question("Rock, Paper, ou Scissors?  ");
         if (answer == "Paper") {
             if (randomNumber == 1) {
                 console.log("Match Nul");
@@ -16,24 +13,21 @@ function rps(randomNumber: number): void {
                 console.log("Perdu");
             } else if (randomNumber == 3) {
                 console.log("Gagné");
-                rl.close();
-                return;
+                a = false;
             }
         } else if (answer == "Rock") {
             if (randomNumber == 1) {
                 console.log("Perdu");
             } else if (randomNumber == 2) {
                 console.log("Gagné");
-                rl.close();
-                return;
+                a = false;
             } else if (randomNumber == 3) {
                 console.log("Match Nul");
             }
         } else if (answer == "Scissors") {
             if (randomNumber == 1) {
                 console.log("Gagné");
-                rl.close();
-                return;
+                a = false;
             } else if (randomNumber == 2) {
                 console.log("Match Nul");
             } else if (randomNumber == 3) {
@@ -41,7 +35,6 @@ function rps(randomNumber: number): void {
             }
         }
         randomNumber = Math.floor(Math.random() * 3 + 1);
-        rps(randomNumber);
-    });
+    };
 }
 rps(randomNumber);
