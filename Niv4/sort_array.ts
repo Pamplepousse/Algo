@@ -1,37 +1,20 @@
-var mytabl: number[] = [0, 3, 2, 5, 7, 3, 9, 5, 12];
+var mytabl: number[] = [0, 3, 2, 5, 7, 3, 9, 5, 12,0,1,3];
 var sortie: number[];
 
 function sort_array(mytabl: number[]): number[] {
     let res: number[] = [];
     let a: number;
+    let n: number;
     for (let i = 0; i < mytabl.length; i++) {
-        if (res.length != 0) {
-            if (mytabl[i] <= res[0]) {
-                res.unshift(mytabl[i]);
-            }
-            else if (mytabl[i] > res[res.length - 1]) {
-                res.push(mytabl[i])
-            }
-            else {
-                for (let j = 0; j < res.length; j++) {
-                    if (res[j] > mytabl[i]) {
-                        res.push(0);
-
-                        for (let k = res.length - 1; k > j; k--) {
-                            res[k] = res[k - 1];
-                        }
-                        res[j] = mytabl[i];
-                        break;
-                    }
-                }
+        for (let j = 0; j < mytabl.length; j++) {
+            if (mytabl[j] > mytabl[j + 1]) {
+                a = mytabl[j];
+                mytabl[j] = mytabl[j + 1];
+                mytabl[j + 1] = a;
             }
         }
-        else {
-    res.push(mytabl[i])
-}
-        }
-return res;
     }
+    return mytabl;
+}
 sortie = sort_array(mytabl);
 console.log(sortie);
-
