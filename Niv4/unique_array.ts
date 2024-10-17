@@ -1,7 +1,7 @@
 var mytabl: number[] = [0, 3, 2, 5, 7, 3, 9, 5, 12];
 var sortie: number[];
 
-function myst_guess_num(mytabl: number[]): number[] {
+function unique_array(mytabl: number[]): number[] {
     let res: number[] = [];
     let a:number;
     for (let i = 0; i < mytabl.length; i++) {
@@ -23,5 +23,5 @@ function myst_guess_num(mytabl: number[]): number[] {
     }
     return res;
 }
-sortie = myst_guess_num(mytabl);
+sortie = unique_array(mytabl);
 console.log(sortie);
